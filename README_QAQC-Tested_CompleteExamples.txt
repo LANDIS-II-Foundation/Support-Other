@@ -39,11 +39,13 @@ Helpful scripts for name (pattern) changes in .txt files are provided below.
 
 
 ##################################################################
-Bash script for changing scenario designators in file names ONLY
-(use a Git Bash shell command line)
+a) Bash script for changing scenario designators in file names ONLY
+(paste into a Git Bash shell command line)
 ###################################################################
 
 	a. re-name all files with 's1e1' in file name to file with 's1e2' in filename
+
+
 find -type f -name '*s1e1*' | while read FILE ;
   do newfile="$(echo ${FILE} |sed -e 's/s1e1/s1e2/')" ;
     mv "${FILE}" "${newfile}" ;
@@ -54,19 +56,21 @@ done
 
 
 
-#####################################
-Bash script for changing scenario designators WITHIN .txt files
-PLUS
-Commandline statement to change .txt encodings from Unix UTF-8 to Windows UTF-8
-(use a Git Bash shell command line)
-#######################################
+##################################################################################
+a) Bash script for changing scenario designators WITHIN .txt files
+b) Commandline statement to change .txt encodings from Unix UTF-8 to Windows UTF-8
+(paste into  a Git Bash shell command line)
+###################################################################################
 
 	a. search all .txt files and replace 's1e1' with 's1e2' at every occurrence
+
 for i in *.txt; 
     do sed -i 's/s1e1/s1e2/g' $i;
 done
 
-	b. change .txt encodings from Unix UTF-8 to Windows UTF-8
+	b. running a. above changes UTF-8 coding
+	b1. change .txt encodings from Unix UTF-8 BACK to Windows UTF-8
+
 unix2dos *.txt
 
 
