@@ -1,0 +1,6 @@
+2014-04-07 15:51:08,068 - LANDIS-II 6.0 (official release)
+2014-04-07 15:51:08,085 - 
+2014-04-07 15:51:08,269 - Loading scenario from file "age-only-scenario.txt" ...
+2014-04-07 15:51:08,357 - Error at line 19 of file "age-only-scenario.txt":
+  Error reading input value for Extension:
+    No extension with the name "Base Harvest".

@@ -1,0 +1,31 @@
+LandisData     "Scenario"
+
+Duration       100
+
+Species   "C:\Users\lucash\Documents\LANDIS_runs\Chapter_8_BatchFiles-Solved\species.txt"
+
+Ecoregions     "C:\Users\lucash\Documents\LANDIS_runs\Chapter_8_BatchFiles-Solved\ecoregions.txt"
+EcoregionsMap  "C:\Users\lucash\Documents\LANDIS_runs\Chapter_8_BatchFiles-Solved\ecoregions.gis"
+
+CellLength     100  << meters
+
+>>  Succession Extension    Initialization File
+>> ----------------------   -------------------
+   "Age-only Succession"    "C:\Users\lucash\Documents\LANDIS_runs\Chapter_8_BatchFiles-Solved\age-only-succession.txt"
+
+
+>> Disturbance Extensions   Initialization File
+>> ----------------------   -------------------
+  "Base Fire"              "C:\Users\lucash\Documents\LANDIS_runs\Chapter_8_BatchFiles-Solved\base-fire_v3.txt"
+>>   "Base Wind"              "wind.txt"
+
+>>   DisturbancesRandomOrder  yes  << optional parameter; default = no
+
+
+>>    Other Extensions      Initialization File
+>> ----------------------   -------------------
+>>  "Output Max Species Age"  "C:\Users\lucash\Documents\LANDIS_runs\Chapter_8_BatchFiles-Solved\max-spp-age-output.txt"
+
+
+>>RandomNumberSeed  4357  << optional parameter; default = the seed is randomly generated using the current time
+
