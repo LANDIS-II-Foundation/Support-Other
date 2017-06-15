@@ -1,0 +1,57 @@
+LandisData  "Base Harvest"
+
+
+Timestep    10
+
+ManagementAreas "./management.gis"
+
+Stands      "./stand.gis"
+
+>> -----------------------------------------
+>> PRESCRIPTIONS
+
+Prescription    Furniture
+    StandRanking    Economic
+	acersacc	100	70
+	betualle	100	70
+	fraxamer	100	70
+	pinustro	100	70
+	querrubr	100	70
+	thujocci	100	70
+    SiteSelection   Complete
+    CohortsRemoved  SpeciesList
+	abiebals  All
+	acerrubr  All
+	acersacc  70-300
+	betualle  70-300
+	fraxamer  70-300
+	piceglau  All
+	pinubank  All
+	pinuresi  All
+	pinustro  70-400
+	poputrem  All
+	querelli  All
+	querrubr  70-250
+	thujocci  70-400
+	tiliamer  All
+	tsugcana  All
+	queralba  All
+	carycord  All
+    
+
+>>-----------------------------------------------------------------
+>> PRESCRIPTION IMPLEMENTATION 
+
+    HarvestImplementations
+>>  Mgmt Area   Prescription    Harvest Area    Begin Time  End Time
+>>  ---------   ------------    ------------    ----------  --------
+	1	Furniture	15%
+	2	Furniture	15%
+	
+	
+>>-----------------------------------------------------------------
+>> OUTPUTS
+
+PrescriptionMaps    harvest/prescripts-{timestep}.gis
+EventLog            harvest-event-test-log.csv
+SummaryLog	    harvest/summary-log.csv

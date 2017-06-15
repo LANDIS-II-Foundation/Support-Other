@@ -1,0 +1,33 @@
+LandisData  "Base Harvest"
+
+
+Timestep    10
+
+ManagementAreas "./management.gis"
+
+Stands      "./stand.gis"
+
+>> -----------------------------------------
+>> PRESCRIPTIONS
+
+Prescription    AspenClearcut
+    StandRanking    Random
+    SiteSelection   Complete
+    CohortsRemoved  ClearCut
+    
+
+>>-----------------------------------------------------------------
+>> PRESCRIPTION IMPLEMENTATION 
+
+    HarvestImplementations
+>>  Mgmt Area   Prescription    Harvest Area    Begin Time  End Time
+>>  ---------   ------------    ------------    ----------  --------
+	1	AspenClearcut	5%
+	2	AspenClearcut	10%
+	
+>>-----------------------------------------------------------------
+>> OUTPUTS
+
+PrescriptionMaps    harvest/prescripts-{timestep}.tif
+EventLog            harvest-event-test-log.csv
+SummaryLog	    harvest/summary-log.csv

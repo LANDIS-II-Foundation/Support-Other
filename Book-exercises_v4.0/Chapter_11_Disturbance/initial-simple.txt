@@ -1,0 +1,26 @@
+LandisData   "Initial Communities"
+
+>>young forest 
+MapCode  1
+   abiebals 10
+   pinuresi 10
+   poputrem 10
+
+>> pole forest
+MapCode  2
+   abiebals 40
+   pinuresi 40
+   poputrem 40
+
+>> mature forest  
+MapCode 3
+   abiebals 70
+   pinuresi 70
+   poputrem 70
+
+>> old forest
+MapCode 4
+   abiebals 100
+   pinuresi 100
+   poputrem 100
+
