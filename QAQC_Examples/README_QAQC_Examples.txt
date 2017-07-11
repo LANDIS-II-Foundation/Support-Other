@@ -45,14 +45,10 @@ Bash script for changing scenario designators in file names ONLY
 
 	a. re-name all files with 's1e1' in file name to file with 's1e2' in filename
 
-
 find -type f -name '*s1e1*' | while read FILE ;
   do newfile="$(echo ${FILE} |sed -e 's/s1e1/s1e2/')" ;
     mv "${FILE}" "${newfile}" ;
 done 
-
-
-
 
 
 
@@ -67,6 +63,7 @@ Commandline statement to change .txt encodings from Unix UTF-8 to Windows UTF-8
 for i in *.txt; 
     do sed -i 's/s1e1/s1e2/g' $i;
 done
+
 
 	b. running a. above changes UTF-8 coding
 	b1. change .txt encodings from Unix UTF-8 BACK to Windows UTF-8
