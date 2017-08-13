@@ -1,4 +1,4 @@
-LandisData  "Ecoregions"
+LandisData  Ecoregions
 
 >>         Map
 >> Active  Code  Name   Description

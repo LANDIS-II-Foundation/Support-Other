@@ -6,14 +6,15 @@ LandisData	"InsectDefoliator"
 
 InsectName	Insect2
 
-MeanDuration			5
-StdDevDuration			0
+StartYear			5
+DurationDistribution		Normal		<< prob dist ==> Normal(5.0, 2.0)
+DurationParameter1		5.0		<<defining parameter; depends on the distribution, must be > 0.0
+DurationParameter2		2.0		<<defining parameter; depends on the distribution, must be > 0.0
+MaxDuration			4.0
 MeanTimeBetweenOutbreaks	7
-StdDevTimeBetweenOutbreaks	0
+StdDevTimeBetweenOutbreaks	2
 
 NeighborhoodSize		250		<< meters
-
-InitialPatchShapeCalibrator	1.0 		<< must be <= 1.0  Higher = Rounder; Lower = tracks host quality closer.
 
 >> Lower this number to lower probabilities of patch generation, i.e. start fewer patches. 
 InitialPatchOutbreakSensitivity	1.0 		<< must be > 0.0
@@ -29,23 +30,56 @@ InitialPatchValue2		25		<<depends on the distribution, must be > 0.0
 >>----------------------------------
 
 SpeciesParameters
-MortalityEstimate		Annual  	<< 'Annual' or '7Year'
+MortalityEstimate		Annual  		<< 'Annual' or '7Year'
 
->> Susceptibility class by species (from Liebhold et al... reference here)
+>> Susceptibility Class by species; all species listed in species_s3e3.txt must appear here.
+>> Insect-impacted species are listed first followed by species for which there is no insect impact. 
+>> Non-impacted species are to be listed as follows:
+>> 	sppname		3 	0	1	0	1
+
 >> Species	Susceptibility		Growth Reduction Parameters  	Mortality Parameters
 >>		Class			Slope	Intercept	      	Slope	Intercept
 >>------------------------------------------------------------------------------------------
-acerrubr       	2			-0.8	1			0.007	0.583
-acersacc       	2			-0.8	1			0.007	0.583
-fraxamer       	3			-0.1	1			0.006	0.547
-pinustro       	2			-1	1			0.016	0.429
-popugran       	1			-.5	1			0.007	0.583
-poputrem       	1			-0.8	1			0.007	0.583
-prunsero       	2			-0.8	1			0.007	0.583
-queralba       	1			-0.1	1			0.006	0.547
-querrubr       	1			-0.1	1			0.006	0.547
-tiliamer       	1			-0.1	1			0.007	0.583
-   
+acerrubr       	2			-0.8	1			0.009	7
+acersacc       	2			-0.8	1			0.009	7
+fraxamer      	3			-0.1	1			0.006	5
+pinustro       	2			-1	1			0.016	4
+popugran       	1			-.5	1			0.009	7
+poputrem       	1			-0.8	1			0.009	7
+prunsero       	2			-0.8	1			0.009	7
+queralba       	1			-0.1	1			0.006	5
+querrubr       	1			-0.1	1			0.006	5
+tiliamer       	1			-0.1	1			0.009	7
+
+
+>> Species for which there is no insect impact
+abiebals 	3 			0 	1 			0 	1
+acernegu 	3 			0 	1 			0 	1
+acerspic 	3 			0 	1 			0 	1
+betualle 	3 			0 	1 			0 	1
+betupapy 	3 			0 	1 			0 	1
+celtis 		3 			0 	1 			0 	1
+fraxnigr 	3 			0 	1 			0 	1
+fraxpenn 	3 			0 	1 			0 	1
+larilari 	3 			0 	1 			0 	1
+ostrvirg 	3 			0 	1 			0 	1
+piceglau 	3 			0 	1 			0 	1
+picemari 	3 			0 	1 			0 	1
+pinubank 	3 			0 	1 			0 	1
+pinuresi 	3 			0 	1 			0 	1
+popubals 	3 			0 	1 			0 	1
+popudelt 	3 			0 	1 			0 	1
+prunpens 	3 			0 	1 			0 	1
+prunvirg 	3 			0 	1 			0 	1
+querelli 	3 			0 	1 			0 	1
+quermacr 	3 			0 	1 			0 	1
+salix	 	3 			0 	1 			0 	1
+thujocci 	3 			0 	1 			0 	1
+ulmuamer 	3 			0 	1 			0 	1
+ulmurubr 	3 			0 	1 			0 	1
+
+
+>> Susceptibility Class Distributions   
 Susceptibilities
 >> Host	Dist80	S1_80	S2_80	Dist60	S1_60	S2_60	Dist40	S1_40	S2_40	Dist20	S1_20	S2_20	Dist0	S1_0	S2_0
 1	Beta	0.84	0.33	Beta	0.84	0.33	Beta	1.14	1.18	Beta	0.76	1.68	Beta	0.8	6.0

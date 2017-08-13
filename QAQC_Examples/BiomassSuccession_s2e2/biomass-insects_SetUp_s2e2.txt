@@ -2,7 +2,6 @@ LandisData "Biomass Insects"
 
 
 
-
 Timestep		1
 
 MapNames		outputs/insects/{insectName}-{timestep}.img		<<this is an output!

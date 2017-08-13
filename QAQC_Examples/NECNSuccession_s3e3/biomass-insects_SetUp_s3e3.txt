@@ -1,13 +1,13 @@
 LandisData "Biomass Insects"
 
 
-
-
 Timestep		1
 
-MapNames		outputs/insects/{insectName}-{timestep}.img		<<this is an output!
 
+MapNames		outputs/insects/{insectName}-{timestep}.img		<<this is an output!
 LogFile			outputs/insects/Insect-log.csv				<<this is an output!
+
+
 
 InsectInputFiles	./biomass-insects_InsectDefoliator1_s3e3.txt
 			./biomass-insects_InsectDefoliator2_s3e3.txt
