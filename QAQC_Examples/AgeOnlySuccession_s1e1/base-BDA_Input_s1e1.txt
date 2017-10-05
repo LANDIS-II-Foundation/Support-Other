@@ -16,7 +16,7 @@ OutbreakPattern		CyclicNormal	<<CyclicNormal or CyclicUniform
 Mean			33.5
 StDev			10.6
 TimeSinceLastEpidemic	10		<<years
-TemporalType 		variablepulse	<<pulse or variablepulse
+TemporalType 		variablepulse	<<pulse or variablepulse or continuous
 MinROS			0
 MaxROS			3
 
